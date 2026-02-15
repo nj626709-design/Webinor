@@ -5,6 +5,11 @@ require("dotenv").config();
 
 const app = express();
 
+app.use(cors({
+  origin: ["https://webinor.tech", "https://www.webinor.tech"],
+  methods: ["GET", "POST"]
+}));
+
 app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
