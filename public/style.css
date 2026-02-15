@@ -1,5 +1,30 @@
+/* ==========================
+   GLOBAL STYLING
+========================== */
 html {
     scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    text-align: center;
+}
+
+/* ==========================
+   HEADER / NAVBAR
+========================== */
+header {
+    background: #2563eb;
+    color: white;
+    padding: 40px 20px;
 }
 
 .navbar {
@@ -7,6 +32,7 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -16,7 +42,8 @@ html {
 }
 
 .logo-img {
-    width: 140px;
+    max-width: 100%;
+    height: auto;
 }
 
 .subtitle {
@@ -28,7 +55,8 @@ html {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 30px;   /* space between Contact & Login */
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -39,46 +67,38 @@ html {
 
 .login-btn {
     background: white;
-    color: #2563eb !important;   /* force blue text */
+    color: #2563eb !important;
     padding: 8px 18px;
     border-radius: 6px;
     font-weight: 600;
 }
 
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #f9fafb;
-}
-
-header {
-    background: linear-gradient(135deg, #2563eb, #1e40af);
-    color: white;
-    padding: 0 20px 80px 20px;  /* remove top padding */
-    text-align: center;
-}
-
+/* ==========================
+   HERO SECTION
+========================== */
 .hero h1 {
     font-size: 42px;
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
+/* ==========================
+   CARDS / SERVICES
+========================== */
 .cards {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 30px;
-    padding: 80px 40px;
-    background: #f2f2f2;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
 }
 
-/* First 3 cards (top row) */
+/* Desktop layout (unchanged) */
 .cards .card:nth-child(1),
 .cards .card:nth-child(2),
 .cards .card:nth-child(3) {
     grid-column: span 2;
 }
 
-/* Last 2 cards (bottom row centered) */
 .cards .card:nth-child(4) {
     grid-column: 2 / span 2;
 }
@@ -87,19 +107,14 @@ header {
     grid-column: 4 / span 2;
 }
 
-
 .card {
     background: white;
-    color: #333;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     text-align: center;
 }
 
-
-
-/* FORCE TEXT COLORS */
 .card h3 {
     color: #2d5bd1 !important;
     margin-bottom: 15px;
@@ -109,20 +124,37 @@ header {
     color: #333 !important;
 }
 
-
-button {
-    background: #2563eb;
-    color: white;
-    border-radius: 8px;
-    padding: 12px 25px;
-    font-weight: 600;
-    border: none;
+/* Services cards smaller version */
+.services .card {
+    width: 100%;
+    max-width: 250px;
 }
 
-/* CONTACT SECTION */
+/* Visit Website Button */
+.visit-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 20px;
+    background: #2d5bd1;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.visit-btn:hover {
+    background: #1e40af;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ==========================
+   CONTACT SECTION
+========================== */
 .contact-section {
     padding: 80px 20px;
-    text-align: center;
     background: #f3f4f6;
 }
 
@@ -182,138 +214,14 @@ button {
     resize: none;
 }
 
-
-.page-section {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.footer {
-    background: #1e3a8a;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* WhatsApp Floating Button */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    font-size: 24px;
-    padding: 15px 18px;
-    border-radius: 50%;
-    text-decoration: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    z-index: 1000;
-    transition: 0.3s;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
-}
-
-.reveal {
-    opacity: 0;
-    transform: translateY(60px);
-    transition: all 0.8s ease;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-        text-align: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-    }
-
-    .contact-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .page-section {
-        padding: 50px 15px;
-    }
-}
-
-@media (max-width: 992px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .cards .card {
-        grid-column: auto !important;
-    }
-}
-
-@media (max-width: 600px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
-}
-/* visit website button */
-.visit-btn {
-    display: inline-block;
-    margin-top: 18px;
-    padding: 10px 20px;
-    background: #2d5bd1;   /* blue */
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-/* Hover effect */
-.visit-btn:hover {
-    background: #1e40af;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* TERMS SECTION */
+/* ==========================
+   TERMS SECTION
+========================== */
 .terms-section {
     max-width: 900px;
     margin: 60px auto;
     padding: 40px;
-    background: #ffffff;
+    background: #fff;
     border-radius: 16px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.08);
     text-align: left;
@@ -361,4 +269,114 @@ button {
     margin-top: 40px;
     font-size: 14px;
     color: #777;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+button {
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* ==========================
+   WHATSAPP FLOATING BUTTON
+========================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 24px;
+    padding: 15px 18px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================
+   RESPONSIVE FIX
+========================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards .card {
+        grid-column: auto !important;
+    }
+}
+
+/* MOBILE FIX (Important Part) */
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    /* 🔥 CARD FIX FOR MOBILE */
+    .cards {
+        grid-template-columns: 1fr !important;
+        padding: 40px 15px;
+    }
+
+    .cards .card {
+        grid-column: auto !important;
+        width: 100% !important;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    button, .login-btn, .visit-btn {
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
 }
