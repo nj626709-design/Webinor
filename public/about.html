@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Webinor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" class="logo-img">
+            <p class="subtitle">Innovate • Build • Scale</p>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" class="login-btn">Client Login</a>
+        </div>
+    </nav>
+</header>
+
+<section class="page-section reveal">
+    <h1>About Webinor</h1>
+    <p>Webinor is a professional web developer focused on building high-quality websites for growing businesses.</p>
+    <p>Our goal is simple — create modern, secure and high-converting websites that represent your brand professionally.</p>
+    <p>We believe every business deserves a powerful online presence, not just a basic website.</p>
+
+     <br><br>
+
+    <h2>Our Mission</h2>
+    <p>
+        Our mission is to empower businesses with professional, conversion-focused websites 
+        that build trust, increase visibility, and drive measurable growth.
+    </p>
+</section>
+
+<footer class="footer">
+    <p>
+        © 2026 Webinor. All Rights Reserved. |
+        <a href="terms.html" style="color:white; text-decoration:underline;">Terms & Conditions</a>
+    </p>
+</footer>
+
+
+<a href="https://wa.me/918689804547" target="_blank" class="whatsapp-float">
+    💬
+</a>
+
+<script>
+function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach((element) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 100;
+
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Services - Webinor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" class="logo-img">
+            <p class="subtitle">Innovate • Build • Scale</p>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" class="login-btn">Client Login</a>
+        </div>
+    </nav>
+</header>
+
+
+
+
+<section class="page-section reveal">
+    <h1>Our Services</h1>
+    <p>We provide complete website solutions tailored to your business needs.</p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Business Website</h3>
+            <p>Professional multi-page websites designed to showcase your services clearly and build customer trust.</p>
+        </div>
+
+        <div class="card">
+            <h3>E-Commerce Website</h3>
+            <p>Sell your products online with secure payment integration and easy management dashboard.</p>
+        </div>
+
+        <div class="card">
+            <h3>SEO Setup</h3>
+            <p>Basic on-page SEO structure to help your website appear in search results and attract local clients.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>
+        © 2026 Webinor. All Rights Reserved. |
+        <a href="terms.html" style="color:white; text-decoration:underline;">Terms & Conditions</a>
+    </p>
+</footer>
+
+
+<a href="https://wa.me/918689804547" target="_blank" class="whatsapp-float">
+    💬
+</a>
+
+<script>
+function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach((element) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 100;
+
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+</script>
+
+</body>
+</html>

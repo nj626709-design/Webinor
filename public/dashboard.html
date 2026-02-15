@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="style.css">
+
+<h2>Client Dashboard</h2>
+<button onclick="goPay()">Pay Now</button>
+
+<script>
+if(!localStorage.getItem("token")){
+  window.location.href="/login.html";
+}
+
+function goPay(){
+  window.location.href="/payment.html";
+}
+</script>

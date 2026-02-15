@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Login - Webinor</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<div class="login-container">
+    <div class="login-card">
+        <img src="logo.png" alt="Webinor Logo" class="login-logo">
+
+        <h2>Client Login</h2>
+        <p class="login-subtitle">Access your dashboard</p>
+
+        <form>
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <a href="#" class="extra-text">Forgot password?</a>
+    </div>
+</div>
+<script>
+document.querySelector(".extra-text").addEventListener("click", function(e){
+    e.preventDefault();
+    alert("Password reset link will be sent to your email.");
+});
+</script>
+</body>
+</html>

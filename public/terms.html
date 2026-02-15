@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Terms & Conditions - Webinor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" class="logo-img">
+            <p class="subtitle">Innovate • Build • Scale</p>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" class="login-btn">Client Login</a>
+        </div>
+    </nav>
+</header>
+
+<section class="page-section reveal terms-section">
+
+    <h1>Terms & Conditions</h1>
+    <p class="terms-intro">
+        These Terms & Conditions govern the use of services provided by Webinor.
+        By engaging our services, you agree to the following terms.
+    </p>
+
+    <div class="terms-box">
+        <h3>1. Services Offered</h3>
+        <p>
+            Webinor provides website design, development, SEO setup, and digital support services.
+            The complete scope of work, pricing, and timeline will be confirmed before the project begins.
+        </p>
+    </div>
+
+    <div class="terms-box">
+        <h3>2. Payment Policy</h3>
+        <p>
+            A minimum advance payment is required to initiate any project.
+            The remaining balance must be cleared before final website deployment.
+            Payments once made are non-refundable unless otherwise agreed in writing.
+        </p>
+    </div>
+
+    <div class="terms-box">
+        <h3>3. Project Timeline</h3>
+        <p>
+            Delivery timelines depend on project complexity and timely content submission by the client.
+            Delays caused due to incomplete information or lack of communication from the client
+            may extend the delivery date.
+        </p>
+    </div>
+
+    <div class="terms-box">
+        <h3>4. Client Responsibilities</h3>
+        <p>
+            Clients are responsible for providing accurate content, images, and materials.
+            Webinor is not liable for copyright issues related to content provided by the client.
+        </p>
+    </div>
+
+    <div class="terms-box">
+        <h3>5. Revisions & Modifications</h3>
+        <p>
+            The agreed project package includes limited revisions.
+            Additional changes beyond the approved scope may incur extra charges.
+        </p>
+    </div>
+
+    <div class="terms-box">
+        <h3>6. Third-Party Services</h3>
+        <p>
+            Hosting, domain registration, payment gateways, and other third-party tools
+            are subject to their respective provider terms. Webinor is not responsible
+            for outages or issues caused by third-party platforms.
+        </p>
+    </div>
+
+    <div class="terms-box">
+        <h3>7. Limitation of Liability</h3>
+        <p>
+            Webinor shall not be held responsible for business losses, data loss,
+            or indirect damages arising from the use of our services.
+        </p>
+    </div>
+
+    <div class="terms-box">
+        <h3>8. Updates to Terms</h3>
+        <p>
+            We reserve the right to update or modify these Terms & Conditions at any time.
+            Continued use of our services implies acceptance of updated terms.
+        </p>
+    </div>
+
+</section>
+
+
+<footer class="footer">
+    <p>© 2026 Webinor. All Rights Reserved.</p>
+</footer>
+
+<a href="https://wa.me/918689804547" target="_blank" class="whatsapp-float">
+    💬
+</a>
+
+<script>
+function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+    reveals.forEach((element) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add("active");
+        }
+    });
+}
+window.addEventListener("scroll", revealOnScroll);
+</script>
+
+</body>
+</html>

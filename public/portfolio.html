@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio - Webinor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" class="logo-img">
+            <p class="subtitle">Innovate • Build • Scale</p>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" class="login-btn">Client Login</a>
+        </div>
+    </nav>
+</header>
+
+
+<section class="page-section reveal">
+    <h1>Our Projects</h1>
+    <p>Here are some of the websites we have successfully developed for our clients.</p>
+
+    <div class="cards">
+        <div class="card reveal">
+    <h3>Shubharang</h3>
+    <p>
+        A modern and visually appealing website designed to showcase services clearly 
+        and provide a smooth user experience.
+    </p>
+    <a href="https://shubharang.com" target="_blank" class="visit-btn">
+        Visit Website
+    </a>
+</div>
+
+<div class="card reveal">
+    <h3>Transcare Transport</h3>
+    <p>
+        A professional transport company website built to generate enquiries 
+        and build trust in logistics services.
+    </p>
+    <a href="https://transcaretransport.in" target="_blank" class="visit-btn">
+        Visit Website
+    </a>
+</div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <p>
+        © 2026 Webinor. All Rights Reserved. |
+        <a href="terms.html" style="color:white; text-decoration:underline;">Terms & Conditions</a>
+    </p>
+</footer>
+
+
+<a href="https://wa.me/918689804547" target="_blank" class="whatsapp-float">
+    💬
+</a>
+
+<script>
+function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach((element) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 100;
+
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+</script>
+
+</body>
+</html>

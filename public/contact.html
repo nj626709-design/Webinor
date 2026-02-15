@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact - Webinor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" class="logo-img">
+            <p class="subtitle">Innovate • Build • Scale</p>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" class="login-btn">Client Login</a>
+        </div>
+    </nav>
+</header>
+
+
+<section class="page-section fade-in">
+    <h1>Let’s Build Your Website</h1>
+    <p>Have a project in mind? Contact us today for a free consultation and let’s discuss how we can grow your business online.</p>
+    <br>
+    <p>Email: webinorinfo@gmail.com</p>
+    <p>Phone: +91 8689804547 / 9321857274</p>
+    <br>
+
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Enquiry</button>
+    </form>
+
+</section>
+
+<footer class="footer">
+    <p>
+        © 2026 Webinor. All Rights Reserved. |
+        <a href="terms.html" style="color:white; text-decoration:underline;">Terms & Conditions</a>
+    </p>
+</footer>
+
+
+<a href="https://wa.me/918689804547" target="_blank" class="whatsapp-float">
+    💬
+</a>
+
+<script>
+function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach((element) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 100;
+
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+fetch("https://your-railway-backend-url/contact", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ name, email, message })
+})
+
+</script>
+
+</body>
+</html>

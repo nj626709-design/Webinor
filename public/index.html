@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webinor - Professional Website Development</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" class="logo-img">
+            <p class="subtitle">Innovate • Build • Scale</p>
+        </div>
+
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" class="login-btn">Client Login</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Professional Websites That Grow Your Business Online</h1>
+        <p>We design fast, secure and premium websites that help transport companies and local businesses generate more leads and build trust.</p>
+        <a href="contact.html"><button>Get Free Website Consultation</button></a>
+    </div>
+</header>
+
+<section class="cards">
+    <div class="card">
+        <h3>Website Development</h3>
+        <p>Custom-built, responsive websites tailored to your business goals. Clean design, fast performance, and mobile-friendly layout.</p>
+    </div>
+
+    <div class="card">
+        <h3>SEO Optimization</h3>
+        <p>We optimize your website to rank higher on Google and attract local customers searching for your services.</p>
+    </div>
+
+    <div class="card">
+        <h3>Maintenance & Support</h3>
+        <p>Ongoing updates, security monitoring, and technical support so your website runs smoothly 24/7..</p>
+    </div>
+    
+    <div class="card">
+        <h3>Website Redesign</h3>
+        <p>Upgrade your existing website with a fresh, modern and high-converting design.</p>
+    </div>
+
+    <div class="card">
+        <h3>Custom Web Applications</h3>
+        <p>Tailored web solutions built specifically for your business operations.</p>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <p>
+        © 2026 Webinor. All Rights Reserved. |
+        <a href="terms.html" style="color:white; text-decoration:underline;">Terms & Conditions</a>
+    </p>
+</footer>
+
+<a href="https://wa.me/918689804547" target="_blank" class="whatsapp-float">
+    💬
+</a>
+
+<script>
+fetch("/contact", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ name, email, message })
+})
+.then(res => res.json())
+.then(data => {
+    alert(data.message);
+});
+</script>
+
+</body>
+</html>
