@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
     <nav class="navbar">
         <div class="logo">
@@ -17,29 +18,25 @@
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="active">Contact</a>
             <a href="login.html" class="login-btn">Client Login</a>
         </div>
     </nav>
 </header>
 
+<main>
+    <section class="contact-page">
+        <h1>Get in Touch</h1>
+        <p>Fill out the form below and we will get back to you as soon as possible.</p>
 
-<section class="page-section fade-in">
-    <h1>Let’s Build Your Website</h1>
-    <p>Have a project in mind? Contact us today for a free consultation and let’s discuss how we can grow your business online.</p>
-    <br>
-    <p>Email: webinorinfo@gmail.com</p>
-    <p>Phone: +91 8689804547 / 9321857274</p>
-    <br>
-
-    <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Enquiry</button>
-    </form>
-
-</section>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</main>
 
 <footer class="footer">
     <p>
@@ -48,34 +45,39 @@
     </p>
 </footer>
 
-
 <a href="https://wa.me/918689804547" target="_blank" class="whatsapp-float">
     💬
 </a>
 
+<!-- Production-ready contact form script -->
 <script>
-function revealOnScroll() {
-    const reveals = document.querySelectorAll(".reveal");
+const contactForm = document.getElementById("contactForm");
 
-    reveals.forEach((element) => {
-        const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 100;
+if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-        if (elementTop < windowHeight - elementVisible) {
-            element.classList.add("active");
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        try {
+            const res = await fetch("https://my-webinor-backend.up.railway.app/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email, message })
+            });
+
+            const data = await res.json();
+            alert(data.message);
+
+            contactForm.reset();
+        } catch (err) {
+            console.error(err);
+            alert("Failed to send message. Please try again later.");
         }
     });
 }
-
-window.addEventListener("scroll", revealOnScroll);
-
-fetch("https://your-railway-backend-url/contact", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ name, email, message })
-})
-
 </script>
 
 </body>

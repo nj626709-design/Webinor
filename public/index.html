@@ -14,6 +14,7 @@
         </div>
 
         <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="portfolio.html">Portfolio</a>
@@ -25,6 +26,7 @@
     <div class="hero">
         <h1>Professional Websites That Grow Your Business Online</h1>
         <p>We design fast, secure and premium websites that help transport companies and local businesses generate more leads and build trust.</p>
+        <!-- Link to dedicated contact page -->
         <a href="contact.html"><button>Get Free Website Consultation</button></a>
     </div>
 </header>
@@ -42,7 +44,7 @@
 
     <div class="card">
         <h3>Maintenance & Support</h3>
-        <p>Ongoing updates, security monitoring, and technical support so your website runs smoothly 24/7..</p>
+        <p>Ongoing updates, security monitoring, and technical support so your website runs smoothly 24/7.</p>
     </div>
     
     <div class="card">
@@ -56,7 +58,6 @@
     </div>
 </section>
 
-
 <footer class="footer">
     <p>
         © 2026 Webinor. All Rights Reserved. |
@@ -67,20 +68,6 @@
 <a href="https://wa.me/918689804547" target="_blank" class="whatsapp-float">
     💬
 </a>
-
-<script>
-fetch(fetch("https://your-railway-url/contact", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ name, email, message })
-})
-.then(res => res.json())
-.then(data => {
-    alert(data.message);
-});
-</script>
 
 </body>
 </html>
