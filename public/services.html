@@ -7,51 +7,74 @@
 
 </head>
 <body>
-<header>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="logo.png" class="logo-img">
-            <p class="subtitle">Innovate • Build • Scale</p>
-        </div>
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html" class="login-btn">Client Login</a>
-        </div>
-    </nav>
-</header>
-
-<section class="page-section reveal">
-<div class="services-container">
+<section class="services-hero">
     <h1>Our Services</h1>
-    <p>We provide complete website solutions tailored to your business needs.</p>
-
-    <div class="cards">
-        <div class="card">
-            <h3>Business Website</h3>
-            <p>Professional multi-page websites designed to showcase your services clearly and build customer trust.</p>
-        </div>
-
-        <div class="card">
-            <h3>E-Commerce Website</h3>
-            <p>Sell your products online with secure payment integration and easy management dashboard.</p>
-        </div>
-
-        <div class="card">
-            <h3>SEO Setup</h3>
-            <p>Basic on-page SEO structure to help your website appear in search results and attract local clients.</p>
-        </div>
-    </div>
-</div>
+    <p>Smart digital solutions to grow your business</p>
 </section>
 
-<a href="https://wa.me/918689804547" target="_blank" class="whatsapp-float">
-    💬
-</a>
+<section class="services-container">
+
+    <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <h3>Business Website</h3>
+        <p>
+            Professional multi-page websites designed to showcase your services
+            clearly and build strong customer trust.
+        </p>
+        <a href="contact.html">Get Started →</a>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">🛒</div>
+        <h3>E-Commerce Website</h3>
+        <p>
+            Sell your products online with secure payment integration,
+            admin dashboard and easy product management.
+        </p>
+        <a href="contact.html">Get Started →</a>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">📈</div>
+        <h3>SEO Setup</h3>
+        <p>
+            Complete on-page SEO optimization to improve search visibility
+            and attract more local customers.
+        </p>
+        <a href="contact.html">Get Started →</a>
+    </div>
+    <div class="service-card">
+    <div class="service-icon">📊</div>
+    <h3>Data Analysis</h3>
+    <p>
+        Transform raw data into meaningful insights using advanced analysis
+        techniques to help you make smarter business decisions.
+    </p>
+    <a href="contact.html">Get Started →</a>
+</div>
+
+<div class="service-card">
+    <div class="service-icon">📈</div>
+    <h3>Power BI Dashboards</h3>
+    <p>
+        Interactive and dynamic dashboards built using Power BI to track KPIs,
+        monitor performance, and visualize your business growth.
+    </p>
+    <a href="contact.html">Get Started →</a>
+</div>
+
+<div class="service-card">
+    <div class="service-icon">🤖</div>
+    <h3>AI Projects</h3>
+    <p>
+        Smart AI-based solutions including automation, prediction models,
+        and intelligent systems tailored to your business needs.
+    </p>
+    <a href="contact.html">Get Started →</a>
+</div>
+
+</section>
 
 <script>
 function revealOnScroll() {
@@ -59,7 +82,8 @@ function revealOnScroll() {
 
     reveals.forEach((element) => {
         const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
+        const elementTop = element.getBounding
+        Rect().top;
         const elementVisible = 100;
 
         if (elementTop < windowHeight - elementVisible) {
@@ -73,30 +97,44 @@ window.addEventListener("scroll", revealOnScroll);
 
 <footer class="footer">
     <div class="footer-container">
-
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Client Login</a>
+        
+        <!-- Column 1 -->
+        <div class="footer-col">
+            <h3>Webinor</h3>
+            <p>We build modern, scalable and high-performing websites & digital solutions for growing businesses.</p>
         </div>
 
-        <div class="footer-contact">
+        <!-- Column 2 -->
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
             <h4>Contact</h4>
             <p>Email: webinorinfo@gmail.com</p>
-            <p>Phone: +91 8689804547</p>
-            <p>Maharashtra, India</p>
+            <p>Phone: +91 8689804547 / 9321857274</p>
+            <p>Mumbai, India</p>
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        <p>© 2026 Webinor. All Rights Reserved.</p>
+    <p>© 2026 Webinor. All Rights Reserved.</p>
+    <div class="footer-legal">
         <a href="terms.html">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
     </div>
+</div>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>

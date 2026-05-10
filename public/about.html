@@ -7,42 +7,57 @@
 
 </head>
 <body>
-<header>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="logo.png" class="logo-img">
-            <p class="subtitle">Innovate • Build • Scale</p>
-        </div>
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html" class="login-btn">Client Login</a>
-        </div>
-    </nav>
-</header>
+<section class="about-hero">
+    <div class="about-bg-shape"></div>
+    <div class="about-bg-shape2"></div>
 
-<section class="page-section reveal">
-    <div class="about-container">
+    <div class="about-hero-content">
         <h1>About Webinor</h1>
-        <p>Webinor is a professional web developer focused on building high-quality websites for growing businesses.</p>
-        <p>Our goal is simple — create modern, secure and high-converting websites that represent your brand professionally.</p>
-        <p>We believe every business deserves a powerful online presence, not just a basic website.</p>
-        <h2>Our Mission</h2>
-        <p>
-            Our mission is to empower businesses with professional, conversion-focused websites
-            that build trust, increase visibility, and drive measurable growth.
-        </p>
-    <div>
+        <p>Innovate • Build • Scale</p>
+        <a href="contact.html" class="about-btn">Work With Us</a>
+    </div>
 </section>
 
-<a href="https://wa.me/918689804547" target="_blank" class="whatsapp-float">
-    💬
-</a>
+<section class="about-main">
 
+    <div class="about-wrapper">
+
+        <div class="about-block">
+            <h2>Who We Are</h2>
+            <p>
+                Webinor is a modern technology solutions provider specializing in 
+                Web Development, Data Analysis, Power BI Dashboards, and AI-based Projects.
+                We build high-performance digital solutions that help businesses grow faster.
+            </p>
+        </div>
+
+        <div class="about-block">
+            <h2>Our Mission</h2>
+            <p>
+                Our mission is to empower businesses with secure, scalable,
+                and conversion-focused digital solutions that increase visibility,
+                build trust, and drive measurable growth.
+            </p>
+        </div>
+
+        <div class="about-different">
+            <h2>What Makes Us Different</h2>
+
+            <div class="features-grid">
+                <div class="feature-item">Modern & SEO-Optimized Websites</div>
+                <div class="feature-item">Data-Driven Decision Making</div>
+                <div class="feature-item">Advanced Power BI Reporting</div>
+                <div class="feature-item">AI-powered Automation Solutions</div>
+                <div class="feature-item">Performance & Security Focused</div>
+                <div class="feature-item">Scalable & Future-Ready Solutions</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 <script>
 function revealOnScroll() {
     const reveals = document.querySelectorAll(".reveal");
@@ -63,30 +78,43 @@ window.addEventListener("scroll", revealOnScroll);
 
 <footer class="footer">
     <div class="footer-container">
-
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Client Login</a>
+        
+        <!-- Column 1 -->
+        <div class="footer-col">
+            <h3>Webinor</h3>
+            <p>We build modern, scalable and high-performing websites & digital solutions for growing businesses.</p>
         </div>
 
-        <div class="footer-contact">
+        <!-- Column 2 -->
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
             <h4>Contact</h4>
             <p>Email: webinorinfo@gmail.com</p>
-            <p>Phone: +91 8689804547</p>
-            <p>Maharashtra, India</p>
+            <p>Phone: +91 8689804547 / 9321857274</p>
+            <p>Mumbai, India</p>
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        <p>© 2026 Webinor. All Rights Reserved.</p>
+    <p>© 2026 Webinor. All Rights Reserved.</p>
+    <div class="footer-legal">
         <a href="terms.html">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
     </div>
+</div>
 </footer>
+<script src="script.js"></script>
 
 </body>
 </html>

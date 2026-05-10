@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Webinor | Professional Websites</title>
+    <title>Webinor | Web Development, Data & AI Solutions Company in Mumbai</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=5">
+    
+    <!-- SEO -->
+    <meta name="description" content="Webinor is a Mumbai-based technology company offering web development, data analytics, Power BI dashboards and AI automation solutions for growing businesses.">
+    <meta name="keywords" content="website developer in Mumbai, web design company, SEO services Mumbai, data analytics, AI projects">
+    <meta name="author" content="Webinor">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Webinor | Website Development Company in Mumbai">
+    <meta property="og:description" content="Professional website development services for businesses.">
+    <meta property="og:image" content="https://webinor.tech/logo.png">
+
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="canonical" href="https://webinor.tech/">
 </head>
 <body>
 
@@ -15,80 +30,247 @@
             <p class="subtitle">Innovate • Build • Scale</p>
         </div>
 
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
-            <a href="portfolio.html">Portfolio</a>
             <a href="contact.html">Contact</a>
-            <a href="login.html" class="login-btn">Client Login</a>
         </div>
-    </div>
-
-    <div class="hero">
-        <h1>Professional Websites That Grow Your Business Online</h1>
-        <p>We design fast, secure and premium websites that help businesses generate more leads and build trust.</p>
-        <button onclick="location.href='contact.html'">Get Free Website Consultation</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 </header>
+  
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>
+      Web Development,<br>
+      <span>Data & AI Solutions</span><br>
+      for Modern Businesses
+    </h1>
+
+    <p>We Help Businesses <strong>Grow with Technology</strong></p>
+
+    <div class="hero-buttons">
+      <button class="btn primary" onclick="openPopup()">Get Free Consultation</button>
+      <a href="#services" class="btn secondary">Explore Services</a>
+    </div>
+  </div>
+</section>
+<!-- POPUP (Write it here 👇 just before </body>) -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h3>Free Consultation</h3>
+
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea placeholder="Tell us about your project"></textarea>
+
+      <button>Submit</button>
+    </div>
+  </div>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+    function openPopup() {
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
 
 <!-- SERVICES CARDS SECTION (ON HOMEPAGE) -->
-<section class="cards">
+<section class="services">
+  <h2 class="section-title">Our Technology Services</h2>
+  <div class="services-grid">
 
-    <div class="card">
-        <h3>Website Development</h3>
-        <p>Custom-built, responsive websites tailored to your business goals.</p>
+    <div class="service-card" id="services">
+      <img src="web.jpg" alt="Web Development">
+      <h3>Web Development</h3>
+      <p>Modern, responsive websites and web applications.</p>
     </div>
 
-    <div class="card">
-        <h3>SEO Optimization</h3>
-        <p>We optimize your website to rank higher on Google and attract local customers.</p>
+    <div class="service-card">
+      <img src="data.jpg" alt="Data Analysis">
+      <h3>Data Analysis</h3>
+      <p>Transform raw data into meaningful insights.</p>
     </div>
 
-    <div class="card">
-        <h3>Maintenance & Support</h3>
-        <p>Ongoing updates and technical support to keep your website secure.</p>
+    <div class="service-card">
+      <img src="powerbi.jpg" alt="Power BI Solutions">
+      <h3>Power BI Dashboards</h3>
+      <p>Interactive dashboards for smarter decisions.</p>
     </div>
 
-    <div class="card">
-        <h3>Website Redesign</h3>
-        <p>Upgrade your existing website with a modern and high-converting design.</p>
+    <div class="service-card">
+      <img src="ai.jpg" alt="AI Projects">
+      <h3>AI Solutions</h3>
+      <p>Automation & intelligent AI-based systems.</p>
     </div>
 
-    <div class="card">
-        <h3>Custom Web Applications</h3>
-        <p>Tailored web solutions built specifically for your business needs.</p>
-    </div>
+  </div>
+</section>
+<section class="process">
+    <div class="container">
+        <h2>How We Work</h2>
+        <p class="section-subtitle">
+            Our structured approach ensures quality, clarity and measurable results.
+        </p>
 
+        <div class="process-grid">
+
+            <div class="process-card">
+                <div class="step-number">01</div>
+                <h3>Discovery & Consultation</h3>
+                <p>We understand your business goals, challenges and technical requirements.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="step-number">02</div>
+                <h3>Strategy & Planning</h3>
+                <p>We design a clear roadmap combining web, data and AI solutions.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="step-number">03</div>
+                <h3>Development & Implementation</h3>
+                <p>We build secure, scalable and performance-driven digital systems.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="step-number">04</div>
+                <h3>Testing & Optimization</h3>
+                <p>We test thoroughly and optimize for performance and reliability.</p>
+            </div>
+
+            <div class="process-card">
+                <div class="step-number">05</div>
+                <h3>Deployment & Support</h3>
+                <p>We launch your solution and provide ongoing technical support.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Technologies Section -->
+<section class="tech-section">
+  <h2>Technologies We Use</h2>
+
+  <div class="tech-container">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>Node.js</span>
+    <span>Python</span>
+    <span>SQL</span>
+    <span>Power BI</span>
+    <span>AI Tools</span>
+  </div>
 </section>
 
-<footer class="footer">
-    <div class="footer-container">
 
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Client Login</a>
+<!-- Why Choose Section -->
+<section class="why-section">
+  <h2>Why Choose Webinor?</h2>
+
+  <div class="why-container">
+    <div class="why-card">
+      <h3>Business-Focused Solutions</h3>
+      <p>We focus on results, not just design.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>Data-Driven Approach</h3>
+      <p>Every decision is backed by insights.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>Affordable & Scalable</h3>
+      <p>Solutions built for growth.</p>
+    </div>
+  </div>
+</section>
+<section class="stats">
+    <div class="stats-container">
+        <div>
+            <h2>2+</h2>
+            <p>Business Websites Delivered</p>
         </div>
 
-        <div class="footer-contact">
+        <div>
+            <h2>100%</h2>
+            <p>Client Satisfaction</p>
+        </div>
+
+        <div>
+            <h2>4+</h2>
+            <p>Core Technologies Used</p>
+        </div>
+    </div>
+</section>
+<div class="cta-section">
+    <h2>Ready to Transform Your Business with Technology?</h2>
+    <p>Let’s build something powerful and scalable together.</p>
+    
+    <a href="contact.html" class="cta-btn">Let's Work Together</a>
+</div>
+<footer class="footer">
+    <div class="footer-container">
+        
+        <!-- Column 1 -->
+        <div class="footer-col">
+            <h3>Webinor</h3>
+            <p>We build modern, scalable and high-performing websites & digital solutions for growing businesses.</p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
             <h4>Contact</h4>
             <p>Email: webinorinfo@gmail.com</p>
-            <p>Phone: +91 8689804547</p>
-            <p>Maharashtra, India</p>
+            <p>Phone: +91 8689804547 / 9321857274</p>
+            <p>Mumbai, India</p>
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        <p>© 2026 Webinor. All Rights Reserved.</p>
+    <p>© 2026 Webinor. All Rights Reserved.</p>
+    <div class="footer-legal">
         <a href="terms.html">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
     </div>
+</div>
 </footer>
+
+<script src="script.js"></script>
+<script>
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+</script>
+
 
 </body>
 </html>

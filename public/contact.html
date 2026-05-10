@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>Contact | Webinor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=7">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="style.css?v=8">
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header>
     <div class="navbar">
         <div class="logo">
@@ -21,20 +21,20 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html" class="login-btn">Client Login</a>
+            <a href="contact.html" class="active">Contact</a>
         </div>
     </div>
 </header>
 
+<!-- CONTACT SECTION -->
 <section class="contact-section">
 
-    <h2>Contact Us</h2>
+    <h2>Let's Build Something Great Together</h2>
+    <p class="contact-subtitle">Have a project in mind? Send us a message and we’ll get back within 24 hours.</p>
 
     <div class="contact-container">
 
-        <!-- LEFT SIDE INFO -->
+        <!-- LEFT INFO -->
         <div class="contact-info">
             <h3>Get In Touch</h3>
             <p><strong>Email:</strong> webinorinfo@gmail.com</p>
@@ -42,65 +42,63 @@
             <p><strong>Location:</strong> Maharashtra, India</p>
         </div>
 
-        <!-- RIGHT SIDE FORM -->
-        <form class="contact-form" action="https://webinor-backend-production.up.railway.app/contact"
-  method="POST">
+<!-- RIGHT FORM -->
+<form id="contact-form" class="contact-form">
 
-            <input 
-                type="text" 
-                name="name" 
-                placeholder="Your Name" 
-                required
-            >
+<input type="text" name="name" id="name" placeholder="Your Name" required>
 
-            <input 
-                type="email" 
-                name="email" 
-                placeholder="Your Email" 
-                required
-            >
+<input type="email" name="email" id="email" placeholder="Your Email" required>
 
-            <textarea 
-                name="message" 
-                placeholder="Your Message" 
-                required
-            ></textarea>
+<textarea name="message" id="message" placeholder="Tell us about your project..." required></textarea>
 
-            <button type="submit">Send Message</button>
+<button type="submit">Send Message</button>
 
-        </form>
+</form>
 
-    </div>
+</div>
 
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
     <div class="footer-container">
-
-        <div class="footer-links">
-            <h4>Quick Links</h4>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Client Login</a>
+        
+        <!-- Column 1 -->
+        <div class="footer-col">
+            <h3>Webinor</h3>
+            <p>We build modern, scalable and high-performing websites & digital solutions for growing businesses.</p>
         </div>
 
-        <div class="footer-contact">
+        <!-- Column 2 -->
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
             <h4>Contact</h4>
             <p>Email: webinorinfo@gmail.com</p>
-            <p>Phone: +91 8689804547</p>
-            <p>Maharashtra, India</p>
+            <p>Phone: +91 8689804547 / 9321857274</p>
+            <p>Mumbai, India</p>
         </div>
 
     </div>
 
     <div class="footer-bottom">
         <p>© 2026 Webinor. All Rights Reserved.</p>
+        <div class="footer-legal">
         <a href="terms.html">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </div>
     </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
